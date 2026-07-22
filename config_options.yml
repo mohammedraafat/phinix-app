@@ -1,0 +1,11 @@
+title: Phinix
+description: Import & export trade platform — browse suppliers, track shipments, manage a multi-currency wallet, and use the built-in AI trade assistant.
+output_file: .env
+
+fields:
+  - name: PORT
+    label: App port
+    type: number
+    default: 8080
+    required: false
+    help: Internal port the app listens on — leave the default unless you have a reason to change it.
