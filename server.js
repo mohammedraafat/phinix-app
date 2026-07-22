@@ -4,10 +4,10 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname, { index: 'index.html' }));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(PORT, () => console.log('Phinix app running on port ' + PORT));
